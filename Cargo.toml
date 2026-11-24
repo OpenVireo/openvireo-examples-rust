@@ -1,0 +1,25 @@
+[package]
+name = "openvireo-examples"
+version = "0.1.0"
+edition = "2021"
+rust-version = "1.98"
+license = "MIT"
+description = "Runnable examples for the OpenVireo Rust core, one per guide on developer.openvireo.com"
+publish = false
+
+[dependencies]
+# The core is not on crates.io: depend on a release tag of github.com/openvireo/openvireo-core.
+# scripts/update-core.sh moves both lines to another release.
+ov-core = { git = "https://github.com/openvireo/openvireo-core", tag = "v1.1.0" }
+ov-share = { git = "https://github.com/openvireo/openvireo-core", tag = "v1.1.0" }
+
+# The Host (src/host.rs): HTTP with reqwest over rustls and the OS trust store.
+async-trait = "0.1"
+reqwest = { version = "0.12", default-features = false, features = ["rustls-tls-native-roots"] }
+tokio = { version = "1", features = ["rt-multi-thread", "macros", "sync"] }
+zeroize = "1"
+
+[profile.dev.package.argon2]
+opt-level = 3   # the account KDF is Argon2id at 64 MiB: seconds per sign-in without this
+[profile.dev.package.blake2]
+opt-level = 3
