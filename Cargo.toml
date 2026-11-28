@@ -8,10 +8,11 @@ description = "Runnable examples for the OpenVireo Rust core, one per guide on d
 publish = false
 
 [dependencies]
-# The core is not on crates.io: depend on a release tag of github.com/openvireo/openvireo-core.
+# The core isn't on crates.io yet: depend on a release tag of github.com/openvireo/openvireo-core.
+# The packages are openvireo-*; their libraries keep the ov_* names (use ov_core::...).
 # scripts/update-core.sh moves both lines to another release.
-ov-core = { git = "https://github.com/openvireo/openvireo-core", tag = "v1.1.0" }
-ov-share = { git = "https://github.com/openvireo/openvireo-core", tag = "v1.1.0" }
+openvireo-core = { git = "https://github.com/openvireo/openvireo-core", tag = "v1.2.2" }
+openvireo-share = { git = "https://github.com/openvireo/openvireo-core", tag = "v1.2.2" }
 
 # The Host (src/host.rs): HTTP with reqwest over rustls and the OS trust store.
 async-trait = "0.1"

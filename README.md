@@ -1,6 +1,6 @@
 # OpenVireo examples: Rust
 
-Runnable examples for the [OpenVireo](https://openvireo.com) Rust core (`ov-core`), one file per guide on
+Runnable examples for the [OpenVireo](https://openvireo.com) Rust core (`openvireo-core`, library `ov_core`), one file per guide on
 [developer.openvireo.com](https://developer.openvireo.com). Each file holds the code from its guide's
 **Rust** tab, wrapped in a program you can run.
 
@@ -8,13 +8,14 @@ Examples in other languages: [TypeScript](https://github.com/openvireo/openvireo
 
 ## Run them
 
-You need Rust 1.98 or later. The core isn't on crates.io: `Cargo.toml` takes `ov-core` (and `ov-share`,
-for `parse_share_link`) from the [v1.1.0 tag](https://github.com/openvireo/openvireo-core/releases/tag/v1.1.0)
-of the core repository, and `Cargo.lock` pins the commit.
+You need Rust 1.98 or later. The core isn't on crates.io yet: `Cargo.toml` takes `openvireo-core` (and
+`openvireo-share`, for `parse_share_link`) from the [v1.2.2 tag](https://github.com/openvireo/openvireo-core/releases/tag/v1.2.2)
+of the core repository, and `Cargo.lock` pins the commit. The libraries keep their `ov_*` names, so the code
+says `use ov_core::...`.
 
 ```toml
 [dependencies]
-ov-core = { git = "https://github.com/openvireo/openvireo-core", tag = "v1.1.0" }
+openvireo-core = { git = "https://github.com/openvireo/openvireo-core", tag = "v1.2.2" }
 ```
 
 ```sh

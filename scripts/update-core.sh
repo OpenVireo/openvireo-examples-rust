@@ -8,6 +8,6 @@ git ls-remote --exit-code --tags https://github.com/openvireo/openvireo-core "v$
   || { echo "no tag v$version in openvireo-core" >&2; exit 1; }
 sed -i.bak -E "s|(git = \"https://github.com/openvireo/openvireo-core\", tag = )\"v[^\"]*\"|\1\"v$version\"|" Cargo.toml
 rm Cargo.toml.bak
-cargo update -p ov-core -p ov-share
+cargo update -p openvireo-core -p openvireo-share
 cargo build
 echo "OpenVireo core $version"

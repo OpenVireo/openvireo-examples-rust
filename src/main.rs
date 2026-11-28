@@ -1,4 +1,4 @@
-//! Runnable examples for the OpenVireo Rust core (`ov-core`), one module per guide on
+//! Runnable examples for the OpenVireo Rust core (`openvireo-core`, library `ov_core`), one module per guide on
 //! developer.openvireo.com.
 //!
 //!     cargo run -- <example> [args]

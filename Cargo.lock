@@ -891,35 +891,23 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "7e036b411754132fd6b74e94b74e9a13c5cf606fa93d1885c35860d3060820b1"
 
 [[package]]
-name = "openvireo-examples"
-version = "0.1.0"
-dependencies = [
- "async-trait",
- "ov-core",
- "ov-share",
- "reqwest",
- "tokio",
- "zeroize",
-]
-
-[[package]]
-name = "ov-core"
-version = "1.1.0"
-source = "git+https://github.com/openvireo/openvireo-core?tag=v1.1.0#dc703171e205930cd45cd816951d1b459d44c716"
+name = "openvireo-core"
+version = "1.2.2"
+source = "git+https://github.com/openvireo/openvireo-core?tag=v1.2.2#f3ba085f0f8a625228f8dcaf49c93e5253db6090"
 dependencies = [
  "async-trait",
  "futures",
- "ov-crypto",
- "ov-error",
- "ov-host",
- "ov-http",
- "ov-kdbx",
- "ov-merge",
- "ov-opaque",
- "ov-protocol",
- "ov-share",
- "ov-sync",
- "ov-vault",
+ "openvireo-crypto",
+ "openvireo-error",
+ "openvireo-host",
+ "openvireo-http",
+ "openvireo-kdbx",
+ "openvireo-merge",
+ "openvireo-opaque",
+ "openvireo-protocol",
+ "openvireo-share",
+ "openvireo-sync",
+ "openvireo-vault",
  "rand_core 0.6.4",
  "serde",
  "serde_json",
@@ -927,9 +915,9 @@ dependencies = [
 ]
 
 [[package]]
-name = "ov-crypto"
-version = "1.1.0"
-source = "git+https://github.com/openvireo/openvireo-core?tag=v1.1.0#dc703171e205930cd45cd816951d1b459d44c716"
+name = "openvireo-crypto"
+version = "1.2.2"
+source = "git+https://github.com/openvireo/openvireo-core?tag=v1.2.2#f3ba085f0f8a625228f8dcaf49c93e5253db6090"
 dependencies = [
  "argon2",
  "base64 0.22.1",
@@ -938,7 +926,7 @@ dependencies = [
  "getrandom 0.2.17",
  "hex",
  "hkdf",
- "ov-error",
+ "openvireo-error",
  "serde",
  "serde_json",
  "sha2",
@@ -949,30 +937,42 @@ dependencies = [
 ]
 
 [[package]]
-name = "ov-error"
-version = "1.1.0"
-source = "git+https://github.com/openvireo/openvireo-core?tag=v1.1.0#dc703171e205930cd45cd816951d1b459d44c716"
+name = "openvireo-error"
+version = "1.2.2"
+source = "git+https://github.com/openvireo/openvireo-core?tag=v1.2.2#f3ba085f0f8a625228f8dcaf49c93e5253db6090"
 
 [[package]]
-name = "ov-host"
-version = "1.1.0"
-source = "git+https://github.com/openvireo/openvireo-core?tag=v1.1.0#dc703171e205930cd45cd816951d1b459d44c716"
+name = "openvireo-examples"
+version = "0.1.0"
 dependencies = [
  "async-trait",
- "ov-error",
- "ov-http",
+ "openvireo-core",
+ "openvireo-share",
+ "reqwest",
+ "tokio",
  "zeroize",
 ]
 
 [[package]]
-name = "ov-http"
-version = "1.1.0"
-source = "git+https://github.com/openvireo/openvireo-core?tag=v1.1.0#dc703171e205930cd45cd816951d1b459d44c716"
+name = "openvireo-host"
+version = "1.2.2"
+source = "git+https://github.com/openvireo/openvireo-core?tag=v1.2.2#f3ba085f0f8a625228f8dcaf49c93e5253db6090"
+dependencies = [
+ "async-trait",
+ "openvireo-error",
+ "openvireo-http",
+ "zeroize",
+]
 
 [[package]]
-name = "ov-kdbx"
-version = "1.1.0"
-source = "git+https://github.com/openvireo/openvireo-core?tag=v1.1.0#dc703171e205930cd45cd816951d1b459d44c716"
+name = "openvireo-http"
+version = "1.2.2"
+source = "git+https://github.com/openvireo/openvireo-core?tag=v1.2.2#f3ba085f0f8a625228f8dcaf49c93e5253db6090"
+
+[[package]]
+name = "openvireo-kdbx"
+version = "1.2.2"
+source = "git+https://github.com/openvireo/openvireo-core?tag=v1.2.2#f3ba085f0f8a625228f8dcaf49c93e5253db6090"
 dependencies = [
  "aes",
  "argon2",
@@ -981,8 +981,8 @@ dependencies = [
  "chacha20 0.9.1",
  "flate2",
  "hmac",
- "ov-crypto",
- "ov-error",
+ "openvireo-crypto",
+ "openvireo-error",
  "quick-xml",
  "salsa20",
  "serde_json",
@@ -993,23 +993,23 @@ dependencies = [
 ]
 
 [[package]]
-name = "ov-merge"
-version = "1.1.0"
-source = "git+https://github.com/openvireo/openvireo-core?tag=v1.1.0#dc703171e205930cd45cd816951d1b459d44c716"
+name = "openvireo-merge"
+version = "1.2.2"
+source = "git+https://github.com/openvireo/openvireo-core?tag=v1.2.2#f3ba085f0f8a625228f8dcaf49c93e5253db6090"
 dependencies = [
- "ov-error",
- "ov-kdbx",
+ "openvireo-error",
+ "openvireo-kdbx",
  "zeroize",
 ]
 
 [[package]]
-name = "ov-opaque"
-version = "0.1.0"
-source = "git+https://github.com/openvireo/openvireo-core?tag=v1.1.0#dc703171e205930cd45cd816951d1b459d44c716"
+name = "openvireo-opaque"
+version = "1.2.2"
+source = "git+https://github.com/openvireo/openvireo-core?tag=v1.2.2#f3ba085f0f8a625228f8dcaf49c93e5253db6090"
 dependencies = [
  "argon2",
  "opaque-ke",
- "ov-error",
+ "openvireo-error",
  "rand_core 0.6.4",
  "sha2",
  "unicode-normalization",
@@ -1017,27 +1017,27 @@ dependencies = [
 ]
 
 [[package]]
-name = "ov-protocol"
-version = "1.1.0"
-source = "git+https://github.com/openvireo/openvireo-core?tag=v1.1.0#dc703171e205930cd45cd816951d1b459d44c716"
+name = "openvireo-protocol"
+version = "1.2.2"
+source = "git+https://github.com/openvireo/openvireo-core?tag=v1.2.2#f3ba085f0f8a625228f8dcaf49c93e5253db6090"
 dependencies = [
  "hex",
- "ov-error",
- "ov-http",
+ "openvireo-error",
+ "openvireo-http",
  "serde",
  "serde_json",
  "sha2",
 ]
 
 [[package]]
-name = "ov-share"
-version = "1.1.0"
-source = "git+https://github.com/openvireo/openvireo-core?tag=v1.1.0#dc703171e205930cd45cd816951d1b459d44c716"
+name = "openvireo-share"
+version = "1.2.2"
+source = "git+https://github.com/openvireo/openvireo-core?tag=v1.2.2#f3ba085f0f8a625228f8dcaf49c93e5253db6090"
 dependencies = [
  "base64 0.22.1",
  "hmac",
- "ov-crypto",
- "ov-error",
+ "openvireo-crypto",
+ "openvireo-error",
  "serde",
  "serde_json",
  "sha1",
@@ -1046,31 +1046,31 @@ dependencies = [
 ]
 
 [[package]]
-name = "ov-sync"
-version = "1.1.0"
-source = "git+https://github.com/openvireo/openvireo-core?tag=v1.1.0#dc703171e205930cd45cd816951d1b459d44c716"
+name = "openvireo-sync"
+version = "1.2.2"
+source = "git+https://github.com/openvireo/openvireo-core?tag=v1.2.2#f3ba085f0f8a625228f8dcaf49c93e5253db6090"
 dependencies = [
  "async-trait",
  "base64 0.22.1",
- "ov-crypto",
- "ov-error",
- "ov-host",
- "ov-kdbx",
- "ov-merge",
- "ov-protocol",
+ "openvireo-crypto",
+ "openvireo-error",
+ "openvireo-host",
+ "openvireo-kdbx",
+ "openvireo-merge",
+ "openvireo-protocol",
  "serde",
  "serde_json",
 ]
 
 [[package]]
-name = "ov-vault"
-version = "1.1.0"
-source = "git+https://github.com/openvireo/openvireo-core?tag=v1.1.0#dc703171e205930cd45cd816951d1b459d44c716"
+name = "openvireo-vault"
+version = "1.2.2"
+source = "git+https://github.com/openvireo/openvireo-core?tag=v1.2.2#f3ba085f0f8a625228f8dcaf49c93e5253db6090"
 dependencies = [
- "ov-crypto",
- "ov-error",
- "ov-kdbx",
- "ov-protocol",
+ "openvireo-crypto",
+ "openvireo-error",
+ "openvireo-kdbx",
+ "openvireo-protocol",
  "serde_json",
  "zeroize",
 ]
